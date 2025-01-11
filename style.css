@@ -1,6 +1,13 @@
 body {
     /* Set line height to 1.5 times the font size
-         and use the OS’s UI font as the website font
-       */
+    and use the OS’s UI font as the website font
+    */
     font: 100%/1.5 system-ui;
   }
+
+.responsive-image {
+    max-width: 80%; /* Scale image width to a maximum of 80% of its container */
+    height: auto;   /* Automatically adjust height to maintain aspect ratio */
+    display: block; /* Optional: Removes inline space below the image */
+    margin: 0 auto; /* Optional: Center the image horizontally */
+}
