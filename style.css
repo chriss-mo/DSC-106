@@ -5,7 +5,7 @@ body {
     font: 100%/1.5 system-ui;
   }
 
-.responsive-image {
+.image {
     max-width: 80%; /* Scale image width to a maximum of 80% of its container */
     height: auto;   /* Automatically adjust height to maintain aspect ratio */
     display: block; /* Optional: Removes inline space below the image */
