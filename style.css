@@ -5,8 +5,10 @@ body {
     padding: 5% 5%;
   }
 
-nav ul {
-  display: contents;
+nav {
+  ul {
+    display: contents;
+  }
 }
 
 .image {
