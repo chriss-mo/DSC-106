@@ -37,8 +37,9 @@ nav {
   display: flex;
   text-align: center;
   padding: 0.5em;
-  /* margin-bottom: 5%; */
+  margin-bottom: 5%;
   border-bottom: 1px solid oklch(80% 3% 200);
+  padding-bottom: -0.25em;
 }
 
 
