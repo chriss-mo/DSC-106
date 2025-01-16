@@ -2,7 +2,7 @@ body {
     font: 100%/1.5 system-ui;
     max-width: 100ch;
     margin-inline: max(1em, calc((100%-100ch)/2));
-    padding: 5% 5%;
+    padding: 5%;
   }
 
 nav {
@@ -16,6 +16,11 @@ nav {
     flex: 1;
   }
   display: flex;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  padding: 0.5em;
+  margin-bottom: 5%;
 }
 
 .image {
