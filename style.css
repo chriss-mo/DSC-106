@@ -18,6 +18,8 @@ nav {
   }
   a {
     flex: 1;
+    text-decoration: none;
+    color: inherit;
   }
   a.current {
     border-bottom: 0.4em solid oklch(85% 3% 200);
@@ -28,8 +30,6 @@ nav {
   }
 
   display: flex;
-  text-decoration: none;
-  color: inherit;
   text-align: center;
   padding: 0.5em;
   margin-bottom: 5%;
