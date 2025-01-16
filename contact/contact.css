@@ -1,11 +1,15 @@
 form {
     display: grid;
     grid-template-columns: auto 1fr;
+    gap: 1.5em;
 }
 
 label {
     display: grid;
     grid-template-columns: subgrid;
     grid-column: 1/-1;
-    gap: 1em;
+}
+
+button {
+    grid-column: 1/-1;
 }
