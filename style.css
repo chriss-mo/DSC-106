@@ -26,7 +26,7 @@ nav {
     color: inherit;
     transition: all 0.3s ease;
   }
-  a:current {
+  a.current {
     border-bottom: 0.4em solid oklch(85% 3% 200);
   }
   a:hover {
