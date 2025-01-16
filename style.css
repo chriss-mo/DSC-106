@@ -5,6 +5,10 @@ body {
     padding: 5% 5%;
   }
 
+nav {
+  display: contents;
+}
+
 .image {
     max-width: 80%;
     height: auto;
