@@ -5,8 +5,7 @@ body {
     padding: 5% 5%;
   }
 
-nav ul, 
-nav ul li {
+nav ul {
   display: contents;
 }
 
