@@ -24,11 +24,12 @@ nav {
     flex: 1;
     text-decoration: none;
     color: inherit;
+    transition: all 0.3s ease;
   }
   a.current {
     border-bottom: 0.4em solid oklch(85% 3% 200);
   }
-  a.hover {
+  a:hover {
     border-bottom: 0.4em solid var(--color-accent);
     background-color: oklch(75% 8% 133);
   }
