@@ -9,6 +9,9 @@ nav {
   ul {
     display: contents;
   }
+  li {
+    display: contents;
+  }
 }
 
 .image {
