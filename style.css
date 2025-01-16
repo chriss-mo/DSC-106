@@ -25,7 +25,7 @@ nav {
     border-bottom: 0.4em solid oklch(85% 3% 200);
   }
   a.hover {
-    border-bottom: 0.4em var(--color-accent);
+    border-bottom: 0.4em solid var(--color-accent);
     background-color: oklch(75% 0.08 133);
   }
 
