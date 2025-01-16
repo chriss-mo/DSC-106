@@ -1,13 +1,11 @@
-input,
-textarea,
-button {
-    font: inherit;
+form {
+    display: grid;
+    grid-template-columns: auto 1fr;
 }
 
-input,
-textarea {
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    margin-block: 5%;
+label {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: 1/-1;
+    gap: 1em;
 }
