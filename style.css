@@ -12,6 +12,10 @@ nav {
   li {
     display: contents;
   }
+  a {
+    flex: 1;
+  }
+  display: flex;
 }
 
 .image {
