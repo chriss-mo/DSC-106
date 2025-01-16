@@ -1,5 +1,5 @@
 h1 {
-    font-size: 400%;
+    border-bottom: 0.2em solid oklch(85% 3% 200);
 }
 
 h2 {
