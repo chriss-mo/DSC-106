@@ -3,3 +3,11 @@ textarea,
 button {
     font: inherit;
 }
+
+input,
+textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin-block: 5%;
+}
