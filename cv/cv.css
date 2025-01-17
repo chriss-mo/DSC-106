@@ -1,6 +1,6 @@
 .cv {
     display: grid;
-    grid-template-columns: 1fr 20%; /* Main content on the left (1fr), Sidebar on the right (20%) */
+    grid-template-columns: 1fr 30%; /* Main content on the left (1fr), Sidebar on the right (20%) */
     gap: 1em;
 }
 
