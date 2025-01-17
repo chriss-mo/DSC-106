@@ -1,13 +1,18 @@
 .cv {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr 20%; /* Main content on the left (1fr), Sidebar on the right (20%) */
     gap: 1em;
 }
 
 .sidebar {
-    background-color: lightgray; /* Example background for the sidebar */
+    background-color: lightgray;
     padding: 1em;
     border-radius: 5%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
@@ -33,7 +38,7 @@ section {
 .skills {
     margin-top: 2em;
     padding: 1em;
-    background-color: lightblue; /* Example background for the skills section */
+    background-color: lightblue;
     border-radius: 5%;
 }
 
