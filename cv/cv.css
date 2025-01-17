@@ -1,6 +1,13 @@
 .cv {
     display: grid;
+    grid-template-columns: auto 1fr;
     gap: 1em;
+}
+
+.sidebar {
+    background-color: lightgray; /* Example background for the sidebar */
+    padding: 1em;
+    border-radius: 5%;
 }
 
 h1 {
@@ -21,4 +28,16 @@ h3 {
 
 section {
     margin-bottom: 5%;
+}
+
+.skills {
+    margin-top: 2em;
+    padding: 1em;
+    background-color: lightblue; /* Example background for the skills section */
+    border-radius: 5%;
+}
+
+.skills ul {
+    list-style-type: disc;
+    padding-left: 20px;
 }
