@@ -3,7 +3,8 @@ h1 {
 }
 
 h2 {
-    margin-bottom: 0.1em;
+    margin-top: -0.2em;
+    margin-bottom: -0.2em;
     text-decoration: underline;
 }
 
@@ -13,7 +14,6 @@ h3 {
 
 section {
     background-color: lightgray;
-    padding: 1em 1em;
-    border-radius: 5%;
-    margin-bottom: 5%;
+    padding: 2% 2%;
+    margin-bottom: 3%;
 }
