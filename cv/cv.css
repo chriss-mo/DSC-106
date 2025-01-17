@@ -7,7 +7,8 @@
 .sidebar {
     background-color: lightgray;
     padding: 1em;
-    border-radius: 5%;
+    margin-left: 2%;
+    /* border-radius: 5%; */
 }
 
 main {
