@@ -1,9 +1,12 @@
 :root{
+  --color-background: canvas;
+  --color-text: canvastext;
   --color-accent: oklch(58% 8% 133);
 }
 
 html {
   accent-color: var(--color-accent);
+  color-scheme: dark;  
 }
 
 body {
@@ -37,7 +40,6 @@ nav {
     border-bottom: 0.4em solid oklch(85% 3% 200);
   }
 
-  color-scheme: dark;  
   display: flex;
   text-align: center;
   padding: 0.5em;
