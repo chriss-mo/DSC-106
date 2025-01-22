@@ -42,6 +42,13 @@ nav {
   padding-bottom: 0;
 }
 
+a.current {
+  border-bottom: 0.4em solid oklch(85% 3% 200);
+}
+a:hover {
+  border-bottom: 0.4em solid var(--color-accent);
+  background-color: oklch(95% 8% 133);
+}
 
 .image {
     max-width: 80%;
