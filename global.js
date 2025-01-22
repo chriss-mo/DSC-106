@@ -42,10 +42,6 @@ for (let p of pages) {
     a.classList.add('current');
   }
 
-  if (target) {
-    a.target = target;
-  }
-  
   a.classList.toggle(
     'current',
     a.host === location.host && a.pathname === location.pathname
