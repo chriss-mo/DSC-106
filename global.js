@@ -15,7 +15,7 @@ function $$(selector, context = document) {
 // currentLink?.classList.add('current');
 
 let pages = [
-  { url: './', title: 'Home' },
+  { url: '/', title: 'Home' },
   { url: 'projects/', title: 'Projects' },
   { url: 'cv/', title: 'CV' },
   { url: 'contact/', title: 'Contact' },
@@ -38,9 +38,9 @@ for (let p of pages) {
   a.href = url;
   a.textContent = title;
   
-  // if (a.host === location.host && a.pathname === location.pathname) {
-  //   a.classList.add('current');
-  // }
+  if (a.host === location.host && a.pathname === location.pathname) {
+    a.classList.add('current');
+  }
   a.classList.toggle(
     'current',
     a.host === location.host && a.pathname === location.pathname
