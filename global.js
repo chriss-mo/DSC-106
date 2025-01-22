@@ -15,7 +15,7 @@ function $$(selector, context = document) {
 // currentLink?.classList.add('current');
 
 let pages = [
-  { url: '', title: 'Home' },
+  { url: './index.html', title: 'Home' },
   { url: 'projects/', title: 'Projects' },
   { url: 'cv/', title: 'CV' },
   { url: 'contact/', title: 'Contact' },
