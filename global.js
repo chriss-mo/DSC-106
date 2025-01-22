@@ -16,10 +16,10 @@ function $$(selector, context = document) {
 
 let pages = [
   { url: '', title: 'Home' },
-  { url: '../projects/', title: 'Projects' },
-  { url: '../cv/', title: 'CV' },
-  { url: '../contact/', title: 'Contact' },
-  { url: 'https://github.com/chriss-mo', target:'_blank', title: 'Github Profile' },
+  { url: 'projects/', title: 'Projects' },
+  { url: 'cv/', title: 'CV' },
+  { url: 'contact/', title: 'Contact' },
+  { url: 'https://github.com/chriss-mo', target:'_blank', title: 'Github Profile' }
   // add the rest of your pages here
 ];
 
