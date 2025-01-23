@@ -15,12 +15,11 @@ function $$(selector, context = document) {
 // currentLink?.classList.add('current');
 
 let pages = [
-  { url: '', title: 'Home' },
+  { url: '../index.html', title: 'Home' },
   { url: 'projects/', title: 'Projects' },
   { url: 'cv/', title: 'CV' },
   { url: 'contact/', title: 'Contact' },
   { url: 'https://github.com/chriss-mo', target:'_blank', title: 'Github Profile' }
-  // add the rest of your pages here
 ];
 
 const ARE_WE_HOME = document.documentElement.classList.contains('home');
@@ -68,13 +67,12 @@ const select = document.querySelector('label.color-scheme select');
 if ('colorScheme' in localStorage) {
   const savedScheme = localStorage.colorScheme;
   document.documentElement.style.setProperty('color-scheme', savedScheme);
-  select.value = savedScheme; // Update the dropdown to match
+  select.value = savedScheme;
 }
 
 select.addEventListener('input', function (event) {
-  const chosenScheme = event.target.value;
-  console.log('color scheme changed to', chosenScheme);
-  document.documentElement.style.setProperty('color-scheme', chosenScheme);
-  localStorage.colorScheme = chosenScheme;
-  select.value = chosenScheme;
+  console.log('color scheme changed to', event.target.value);
+  document.documentElement.style.setProperty('color-scheme', event.target.value);
+  localStorage.colorScheme = event.target.value;
+  select.value = event.target.value;
 });
