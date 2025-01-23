@@ -1,3 +1,7 @@
+:root {
+  --color-accent: oklch(58% 8% 133);
+}
+
 .cv {
     display: grid;
     grid-template-columns: 1fr 30%; /* Main content on the left (1fr), Sidebar on the right (20%) */
@@ -5,7 +9,7 @@
 }
 
 .sidebar {
-    background-color: lightgray;
+    background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
     padding: 1em;
     margin-left: 2%;
     /* border-radius: 5%; */
