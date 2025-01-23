@@ -6,10 +6,11 @@ form?.addEventListener('submit', (event) => {
     const data = new FormData(form);
 
     let url = form.action + '?';
+
     for (let [name, value] of data) {
-        // url += `${encodeURIComponent(name)}=${encodeURIComponent(value)}&`;
+        url += `${encodeURIComponent(name)}=${encodeURIComponent(value)}&`;
         console.log(name, value);
     }
-    
+    console.log('url: ', url);
     location.href = url;
 });
