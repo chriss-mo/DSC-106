@@ -15,7 +15,7 @@ function $$(selector, context = document) {
 // currentLink?.classList.add('current');
 
 let pages = [
-  { url: '/', title: 'Home' },
+  { url: '', title: 'Home' },
   { url: 'projects/', title: 'Projects' },
   { url: 'cv/', title: 'CV' },
   { url: 'contact/', title: 'Contact' },
@@ -65,7 +65,16 @@ document.body.insertAdjacentHTML(
 
 const select = document.querySelector('label.color-scheme select');
 
+if ('colorScheme' in localStorage) {
+  const savedScheme = localStorage.colorScheme;
+  document.documentElement.style.setProperty('color-scheme', savedScheme);
+  select.value = savedScheme; // Update the dropdown to match
+}
+
 select.addEventListener('input', function (event) {
-  console.log('color scheme changed to', event.target.value);
-  document.documentElement.style.setProperty('color-scheme', event.target.value);
+  const chosenScheme = event.target.value;
+  console.log('color scheme changed to', chosenScheme);
+  document.documentElement.style.setProperty('color-scheme', chosenScheme);
+  localStorage.colorScheme = chosenScheme;
+  select.value = chosenScheme;
 });
