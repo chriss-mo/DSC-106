@@ -33,13 +33,13 @@ for (let p of pages) {
   
   url = !ARE_WE_HOME && !url.startsWith('http') ? '../' + url : url;
 
-  if (p.target) {
-    a.target = p.target;
-  }
-
   let a = document.createElement('a');
   a.href = url;
   a.textContent = title;
+
+  if (p.target) {
+    a.target = p.target;
+  }
 
   if (a.host === location.host && a.pathname === location.pathname) {
     a.classList.add('current');
