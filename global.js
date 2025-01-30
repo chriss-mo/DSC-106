@@ -4,16 +4,6 @@ function $$(selector, context = document) {
   return Array.from(context.querySelectorAll(selector));
 }
 
-// const navLinks = $$("nav a");
-
-// let currentLink = navLinks.find(
-//   (a) => a.host === location.host && a.pathname === location.pathname
-// );
-
-// currentLink.classList.add('current');
-
-// currentLink?.classList.add('current');
-
 let pages = [
   { url: '', title: 'Home' },
   { url: 'projects/', title: 'Projects' },
@@ -80,3 +70,57 @@ select.addEventListener('input', function (event) {
   localStorage.colorScheme = event.target.value;
   select.value = event.target.value;
 });
+
+export async function fetchJSON(url) {
+  try {
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error(`Failed to fetch projects: ${response.statusText}`);
+      }
+      // console.log(response)
+      const data = await response.json();
+      return data; 
+  } catch (error) {
+      console.error('Error fetching or parsing JSON data:', error);
+  }
+}
+
+export function renderProjects(project, containerElement, headingLevel = 'h2') {
+  containerElement.innerHTML = '';
+  project.forEach(pj => {
+    const article = document.createElement('article');
+    article.innerHTML = `
+      <h3>${pj.title}</h3>
+      <img src="${pj.image}" alt="${pj.title}">
+      <p>${pj.description}</p>
+  `;
+    containerElement.appendChild(article);
+  });
+}
+
+async function loadProjects() {
+  const projectsContainer = document.querySelector('.projects');
+  const projectsTitle = document.querySelector('.projects-title'); // Select the title element
+
+  if (!projectsContainer) {
+      console.error('Projects container not found!');
+      return;
+  }
+
+  const projects = await fetchJSON('../lib/projects.json');
+  
+  if (projects && projects.length > 0) {
+      renderProjects(projects, projectsContainer, 'h2');
+      // Update the projects title dynamically with the count
+      projectsTitle.textContent = `${projects.length} Projects`;
+  } else {
+      projectsContainer.innerHTML = '<p>No projects available.</p>';
+      projectsTitle.textContent = '0 Projects'; // Show 0 if no projects exist
+  }
+}
+
+export async function fetchGitHubData(username) {
+  return fetchJSON(`https://api.github.com/users/${username}`);
+}
+
+loadProjects();

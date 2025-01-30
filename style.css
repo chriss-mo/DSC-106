@@ -63,3 +63,29 @@ nav {
     display: block;
 }
 
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 10px;
+  border: 2px solid black; /* Add black outline */
+  /* border-radius: 5px; Optional: rounded corners */
+}
+
+.profile-grid dt, 
+.profile-grid dd {
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.profile-grid dt {
+  font-weight: bold;
+  grid-row: 1; /* Place dt elements in the first row */
+}
+
+.profile-grid dd {
+  grid-row: 2; /* Place dd elements in the second row */
+  margin: 0;
+}
+
