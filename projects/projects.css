@@ -22,3 +22,77 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.1;
     text-wrap: balance;
 }
+
+#projects-pie-plot {
+    max-width: 20em;
+    margin-block: 2em;
+  
+    overflow: visible;
+}
+
+/* .legend {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 8px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+} */
+
+.legend {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+    padding: 8px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.legend li {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.legend .swatch {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    aspect-ratio: 1 / 1;
+    border-radius: 3px;
+    margin-right: 8px;
+    background-color: var(--color);
+}
+
+.container {
+    display: flex; /* Arrange children (svg and legend) side by side */
+    align-items: center; /* Align them vertically */
+    gap: 20px; /* Space between pie chart and legend */
+}
+
+&:has(path:hover) {
+    path:not(:hover) {
+      opacity: 0.5;
+    }
+}
+
+path {
+    transition: 300ms;
+}
+
+.selected {
+    --color: oklch(60% 45% 0) !important;
+  
+    &:is(path) {
+      fill: var(--color);
+    }
+}
+
+path {
+    cursor: pointer;
+}
