@@ -1,3 +1,20 @@
+html, body {
+    height: 100%; /* Ensure the body takes the full height of the viewport */
+    margin: 0; /* Remove default margin */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px; /* Adjust as needed */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
 #stats {
     display: flex;
     grid-template-columns: repeat(4, 1fr); /* Four equal columns */
@@ -113,6 +130,7 @@ circle.selected {
     justify-content: center;
     align-items: center;
     padding: 50px; /* Adjust as needed */
+    height: 60vh;
 }
 
 .files {
@@ -178,19 +196,25 @@ circle.selected {
     display: grid;
     grid-template-columns: subgrid;
 }
-#scroll-container {
+#scroll-container, #scroll-container-stats {
     grid-column: 1;
     position: relative;
     width: 95%;
-    height: 350px;
+    height: 80vh;
     overflow-y: scroll;
-    border: 1px solid #ccc;
+    border: none; /* Hide the border */
     margin-bottom: 50px;
+    scrollbar-width: none; /* For Firefox */
 }
+
+#scroll-container::-webkit-scrollbar, #scroll-container-stats::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
+
 #chart {
     grid-column: 2;
 }
-#spacer {
+#spacer, #spacer-stats {
     position: absolute;
     top: 0;
     left: 0;
@@ -209,4 +233,35 @@ circle.selected {
     padding: 10px;
     box-sizing: border-box;
     border-bottom: 2px solid #eee;
+}
+
+#commit-tooltip {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure the tooltip is above other elements */
+    display: none; /* Initially hidden */
+    color: black; /* Ensure text color is visible */
+    width: 8em;
+}
+
+#commit-tooltip dt, #commit-tooltip dd {
+    display: inline-flex;
+    margin: 0;
+    padding: 5px 0;
+}
+
+#commit-tooltip dt {
+    font-weight: bold;
+    text-align: left;
+}
+
+#files-n-stats{
+    margin-top: 20%;
+}
+
+#scroll-container-stats{
+    margin-top: 20%;
 }

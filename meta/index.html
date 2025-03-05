@@ -8,43 +8,48 @@
     <link rel="stylesheet" href="meta.css">
 </head>
 <body>
-    <h1>Meta</h1>
-    <p>This page includes stats about the code of this website.</p>
-
-    <div id="filter-container">
-        <label for="commit-progress">Show commits until:</label>
-        <input type="range" id="commit-progress" min="0" max="100" value="100">
-        <time id="commit-time"></time>
-        <span id="any-time">(any time)</span>
+    <div>
+        <h1>Meta</h1>
+        <h3>This page includes stats about the code of this website.</h3>    
     </div>
-    
-    <div id="stats"></div>
-    <dl class="files"></dl>
 
     <div id="scrollytelling">
         <div id="scroll-container">
-            <div id="spacer"></div>
+            <!-- <div id="spacer"></div> -->
             <div id="items-container"></div>
         </div>
-        <div id="chart"></div>
+        <div>
+            <h2>Commits By Time</h2>
+            <div id="chart"></div>
+        </div>
     </div>
-
     <dl id="commit-tooltip" class="info tooltip" hidden>
-        <dt>Commit</dt>
-        <dd>
-          <a href="" id="commit-link" target="_blank"></a>
-        </dd>
-        <dt>Date</dt>
+        <dt>Date: </dt>
         <dd id="commit-date"></dd>
-        <dt>Time</dt>
+        <dt>Commit: </dt>
+        <dd>
+            <a href="" id="commit-link" target="_blank"></a>
+        </dd>
+        <dt>Time: </dt>
         <dd id="commit-time"></dd>
-        <dt>Author</dt>
+        <dt>Author: </dt>
         <dd id="commit-author"></dd>
-        <dt>Lines Edited</dt>
+        <dt>Lines Edited: </dt>
         <dd id="commit-lines"></dd>
     </dl>
     <p id="selection-count">No commits selected</p>
     <dl id="language-breakdown" class="stats"></dl>
+    <div id="files-n-stats">
+        <div id="stats"></div>
+        <dl class="files"></dl>
+    </div>
+    <div id="stats-container">
+        <div id="scroll-container-stats" class="scroll-container">
+            <div id="spacer-stats"></div>
+            <div id="items-container-stats"></div>
+        </div>
+    </div>
+
     <script src="./main.js"></script>
 </body>
 </html>
