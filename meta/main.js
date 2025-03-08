@@ -352,10 +352,10 @@ function renderItems(startIndex) {
                   .attr('class', 'item')
                   .html(d => `
                     <p>
-                      On ${d.datetime.toLocaleString("en", {dateStyle: "full", timeStyle: "short"})}, I made
-                      <a href="${d.url}" target="_blank">
-                        ${d.index > 0 ? 'another glorious commit' : 'my first commit, and it was glorious'}
-                      </a>. I edited ${d.totalLines} lines across ${d3.rollups(d.lines, D => D.length, d => d.file).length} files. Then I looked over all I had made, and I saw that it was very good.
+                        On ${d.datetime.toLocaleString("en", {dateStyle: "full", timeStyle: "short"})}, I made
+                        <a href="${d.url}" target="_blank">
+                            ${d.index > 0 ? '' : 'this commit'}
+                        </a>. I edited ${d.totalLines} lines across ${d3.rollups(d.lines, D => D.length, d => d.file).length} files. Then I looked over all I made, and I saw that it was good.
                     </p>
                   `)
                   .style('position', 'absolute')
@@ -382,8 +382,8 @@ function renderStatsItems(startIndex) {
                          <p>
                            On ${d.datetime.toLocaleString("en", {dateStyle: "full", timeStyle: "short"})}, I made
                            <a href="${d.url}" target="_blank">
-                             ${d.index > 0 ? 'another glorious commit' : 'my first commit, and it was glorious'}
-                           </a>. I edited ${d.totalLines} lines across ${d3.rollups(d.lines, D => D.length, d => d.file).length} files. Then I looked over all I had made, and I saw that it was very good.
+                             ${d.index > 0 ? '' : 'this commit'}
+                           </a>. I edited ${d.totalLines} lines across ${d3.rollups(d.lines, D => D.length, d => d.file).length} files. Then I looked over all I made, and I saw that it was good.
                          </p>
                        `)
                        .style('position', 'absolute')
